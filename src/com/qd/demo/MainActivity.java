@@ -16,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
 	private Button mRotate;
 	private Button mTranslate;
 	private Button mContinue;
+	private Button mFrame;
 	
 
 	@Override
@@ -93,6 +94,15 @@ public class MainActivity extends ActionBarActivity {
 						mImageView.startAnimation(animation2);
 					}
 				});
+			}
+		});
+		
+		mFrame= (Button) findViewById(R.id.frame);
+		mFrame.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				mImageView.setImageResource(R.drawable.anim_list);
 			}
 		});
 	}
