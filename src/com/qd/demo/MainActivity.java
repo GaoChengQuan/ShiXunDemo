@@ -13,6 +13,8 @@ import android.widget.ImageView;
 public class MainActivity extends ActionBarActivity {
 	private ImageView mImageView;
 	private Button mScale;
+	private Button mAlpha;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,16 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View arg0) {
 				Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.scale);
+				mImageView.startAnimation(animation);
+			}
+		});
+		
+		mAlpha = (Button) findViewById(R.id.alpha);
+		mAlpha.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.alpha);
 				mImageView.startAnimation(animation);
 			}
 		});

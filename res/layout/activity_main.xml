@@ -14,6 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Scale(缩放动画)" />
+        
+        <Button
+            android:id="@+id/alpha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alpha(透明度动画)" />
     </LinearLayout>
 
     <LinearLayout
