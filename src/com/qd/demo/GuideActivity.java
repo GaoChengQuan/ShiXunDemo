@@ -3,6 +3,8 @@ package com.qd.demo;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.qd.demo.adapter.ViewPagerAdapter;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -11,6 +13,7 @@ import android.view.View;
 
 public class GuideActivity extends Activity{
 	private ViewPager mViewPager;
+	private ViewPagerAdapter mAdapter;
 	//存放导航的4个页面
 	private List<View> mViewList;
 
@@ -28,8 +31,8 @@ public class GuideActivity extends Activity{
 		mViewList.add(inflater.inflate(R.layout.activity_guide_three, null));
 		mViewList.add(inflater.inflate(R.layout.activity_guide_four, null));
 		
-		
-		
+		mAdapter = new ViewPagerAdapter(mViewList);
+		mViewPager.setAdapter(mAdapter);
 		
 	}
 }
