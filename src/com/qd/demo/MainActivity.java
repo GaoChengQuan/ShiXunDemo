@@ -15,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
 	private Button mScale;
 	private Button mAlpha;
 	private Button mRotate;
+	private Button mTranslate;
 	
 
 	@Override
@@ -48,6 +49,16 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View arg0) {
 				Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate);
+				mImageView.startAnimation(animation);
+			}
+		});
+		
+		mTranslate = (Button) findViewById(R.id.translate);
+		mTranslate.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.translate);
 				mImageView.startAnimation(animation);
 			}
 		});

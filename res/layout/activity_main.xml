@@ -26,6 +26,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rotate(旋转动画)" />
+        
+        <Button
+            android:id="@+id/translate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translate(位移动画)" />
     </LinearLayout>
 
     <LinearLayout
