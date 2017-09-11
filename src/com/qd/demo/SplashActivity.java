@@ -24,7 +24,7 @@ public class SplashActivity extends Activity{
 				break;
 			case GO_GUIDE://延迟3秒后跳转到引导页
 				System.out.println("GO_GUIDE");
-				Intent intent2 = new Intent(SplashActivity.this, MainActivity.class);
+				Intent intent2 = new Intent(SplashActivity.this, GuideActivity.class);
 				startActivity(intent2);
 				finish();
 				break;
@@ -46,17 +46,11 @@ public class SplashActivity extends Activity{
 		SharedPreferences preferences = getSharedPreferences("shixun", MODE_PRIVATE);
 		//isFirstRun=true表示程序第一次运行
 		boolean isFirstRun = preferences.getBoolean("isFirstRun", true);
-		if (isFirstRun) {//如果是第一次运行
+		if (isFirstRun) {//如果是第一次运行,跳转到引导页
 			mHandler.sendEmptyMessageDelayed(GO_GUIDE, 3000);
+		} else {//如果不是第一次运行，跳转到主页
+			mHandler.sendEmptyMessageDelayed(GO_MAIN, 3000);
 		}
 	}
-
-	
-	
-	
-	
-	
-	
-	
 	
 }
